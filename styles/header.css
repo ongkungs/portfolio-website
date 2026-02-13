@@ -1,0 +1,38 @@
+.header {
+    width: 100%;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 10px;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 60%;
+    width: 60%;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 70px;
+    padding-right: 40px;
+}
+
+.nav-button {
+    color: rgb(88, 88, 88);
+    font-weight: 200;
+    font-size: 1rem;
+    font-family: 'Fjalla One', sans-serif;
+}

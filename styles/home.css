@@ -1,0 +1,14 @@
+.nickname {
+    font-size: 8vw;
+    font-family: 'Archivo Black', sans-serif;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+    font-size: 3vw;
+    font-family: 'Fjalla One', sans-serif;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 70px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30vh;
+}
