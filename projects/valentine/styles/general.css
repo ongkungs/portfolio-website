@@ -24,7 +24,7 @@
 }
 
 .content {
-    height: 35vh;
+    height: 30vh;
     margin-top: 48vh;
     display: grid;
     grid-template-rows: 1fr 4fr;
