@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Happy Valentine's Day</title>
+
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/page-1.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page">
+        <img class="background" src="assests/background/open.png" alt="">
+        <div class="content">
+            <div class="question">คุณต้องการอ่านจดหมายฉบับนี้ไหม</div>
+            <div class="choices">
+                <a href="letter.html" class="btn-wrapper">
+                    <div class="choice-1">อ่าน</div>
+                </a>
+                <div class="choice-2">ไม่</div>
+            </div>
+        </div>
+        <img class="emote" src="assests/emote/shy1.gif" alt="">
+    </div>
+    <script>
+        const greenWrapper = document.querySelector('.btn-wrapper');
+        const greenBtn = document.querySelector('.choice-1');
+        const redBtn = document.querySelector('.choice-2');
+        const emoteImg = document.querySelector('.emote');
+        const greenTexts = ["อ่าน", "อ่านสิ", "อ่านเถอะ", "อ่านเถอะน่า"];
+        let clickCount = 0;
+
+        redBtn.addEventListener('click', () => {
+            clickCount++;
+
+            const greenFlex = 1 + (clickCount * 2);
+            const redFlex = Math.max(0.01, 1 - (clickCount * 0.3));
+
+            greenWrapper.style.flex = greenFlex;
+            redBtn.style.flex = redFlex;
+
+            greenBtn.style.fontSize = (3 + (clickCount * 1.5)) + 'rem';
+            redBtn.style.fontSize = Math.max(0.5, 3 - (clickCount * 0.8)) + 'rem';
+
+            if (clickCount < greenTexts.length) {
+                greenBtn.innerText = greenTexts[clickCount];
+            }
+
+            if (clickCount === 1) {
+                emoteImg.src = "assests/emote/eh.gif";
+            } else if (clickCount === 2) {
+                emoteImg.src = "assests/emote/angry.gif";
+            }
+
+            if (clickCount >= 3) {
+                redBtn.style.display = 'none';
+                emoteImg.src = "assests/emote/heart.gif";
+            }
+        });
+    </script>
+</body>
+
+</html>

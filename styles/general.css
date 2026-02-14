@@ -29,16 +29,6 @@ body {
     align-items: center;
 }
 
-.main-grid {
-    background-color: rgb(67, 110, 67, 1);
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    height: 500vh;
-    display: grid;
-    grid-template-rows: repeat(auto-fill, 100vh);
-}
-
 a {
     text-decoration: none;
 }
